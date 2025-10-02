@@ -328,5 +328,5 @@ This Docker environment is provided as-is. CODA itself is licensed under BSD-3-C
 ---
 
 **Version**: 1.0.0  
-**Last Updated**: 2024  
-**CODA Version**: 2.25.6 (configura
+**Last Updated**: 10-03-2025
+**CODA Version**: 2.25.6
