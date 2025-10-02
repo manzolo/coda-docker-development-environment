@@ -1,0 +1,27 @@
+services:
+  coda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CODA_VERSION: ${CODA_VERSION:-2.25.6}
+    image: ${PROJECT_NAME:-coda-project}/coda:${CODA_VERSION:-2.25.6}
+    container_name: ${CONTAINER_NAME:-coda-dev}
+    volumes:
+      - ${SOURCE_PATH:-./src}:/workspace
+      - coda-cache:/root/.cache
+    environment:
+      - CODA_VERSION=${CODA_VERSION:-2.25.6}
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    networks:
+      - coda-network
+
+volumes:
+  coda-cache:
+    driver: local
+
+networks:
+  coda-network:
+    driver: bridge
