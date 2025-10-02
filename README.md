@@ -42,8 +42,8 @@ CODA supports reading data from numerous satellite missions and instruments incl
 
 1. **Clone or download this repository**
    ```bash
-   git clone <your-repo-url>
-   cd coda-docker
+   git clone https://github.com/manzolo/coda-docker-development-environment
+   cd coda-docker-development-environment
    ```
 
 2. **Run the initial setup**
